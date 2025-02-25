@@ -66,4 +66,12 @@ void deallocateMemoryForArray(int** dpArray);
  * @param end
  */
 void fillWithRandomNumbers(int n, float *pArray, int start, int end);
+
+/**
+ * 
+ * @param n 
+ * @return 
+ */
+bool prime(int n);
+
 #endif //FUNCTIONS_H

@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
+#include <math.h>
 
 
 int sum(int number1, int number2)
@@ -82,4 +83,12 @@ void fillWithRandomNumbers(int n, float *pArray, int start, int end) {
  for (int i = 0; i < n; i++) {
   pArray[i]=1/(float)(start+1+rand()%(end-start+1));
  }
+}
+
+bool prime(int n) {
+ for(int i=2;i<=sqrt(n);i++) {
+  if(n%i==0)
+   return false;
+ }
+ return true;
 }
