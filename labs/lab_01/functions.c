@@ -50,6 +50,7 @@ void readArray(int* pn, int** dpArray, const char* input)
  exit(-2);
  }
  scanf("%i", pn);
+
  allocateMemoryForArray2(*pn, dpArray);
  for (int i = 0; i < *pn; i++)
  {
