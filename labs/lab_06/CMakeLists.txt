@@ -3,4 +3,6 @@ project(lab_06 C)
 
 set(CMAKE_C_STANDARD 23)
 
-add_executable(lab_06 main.c)
+add_executable(lab_06 main.c
+        Palidrom/stack.h
+        Palidrom/stack.c)

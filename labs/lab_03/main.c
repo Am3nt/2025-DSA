@@ -2,8 +2,9 @@
 #include "Student.h"
 
 int main(void) {
-    Student_t student={"Csengo Csenge","ASDFASDF","Vajda Hunyad",{2003,3,4},1,8};
-    //readStudentDetails(&student);
-    printStudent(student);
+    int n;
+    Student_t *t;
+    readAllStudentsDetails(&t,&n,"be.txt");
+    printAllStudents(t,n,"ki.txt");
     return 0;
 }
