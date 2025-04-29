@@ -3,4 +3,4 @@ project(extra_02 C)
 
 set(CMAKE_C_STANDARD 23)
 
-add_executable(extra_02 main.c)
+add_executable(extra_02 cqueue.c cqueue.h main.c)
