@@ -62,7 +62,13 @@ void printList(Node* head);
 
 /**
  *
- * @param head
+ * @param node
  */
-void buli(Node* node);
+int buli(Node* node);
+
+/**
+ * 
+ * @param node 
+ */
+void kibuli(Node* node,int db);
 #endif //SIMPLE_LIST_FUNCTIONS_H

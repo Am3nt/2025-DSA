@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "simple_list_functions.h"
+#include "headers/binary_search_tree.h"
 
 int main(void)
 {
@@ -42,6 +43,6 @@ int main(void)
              }
          }
     printList(head);
-
+    kibuli(head,buli(head));
     return 0;
 }

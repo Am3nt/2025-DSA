@@ -54,13 +54,40 @@ void printList(Node* node) {
     }
 }
 
-void buli(Node* node) {
+int buli(Node* node) {
     int db=0;
-    while (node != NULL)
-    {
-        if (node->data.szuletesiDatum.ev<=2005 && node->data.szuletesiDatum.honap <=5 && node->data.szuletesiDatum.nap<=29) {
-            db++;
+    while (node != NULL) {
+        if (node->data.bulizas>=5 && node->data.szuletesiDatum.ev <=2005) {
+                db++;
+            if (node->data.bulizas>=5 && node->data.szuletesiDatum.honap <=5) {
+                db++;
+                if (node->data.bulizas>=5 && node->data.szuletesiDatum.nap <=6) {
+                    db++;
+                }
+            }
         }
         node=node->next;
+    }
+    return db;
+}
+
+void kibuli(Node* node,int db) {
+    if (db>=10) {
+        printf("Emberek akikkel lehet bulizni: \n" );
+        while (node != NULL) {
+            if (node->data.bulizas>=5 && node->data.szuletesiDatum.ev <=2005) {
+                printf("%s \n",node->data.nev);
+                if (node->data.bulizas>=5 && node->data.szuletesiDatum.honap <=5) {
+                    printf("%s \n",node->data.nev);
+                    if (node->data.bulizas>=5 && node->data.szuletesiDatum.nap <=6) {
+                        printf("%s \n",node->data.nev);
+                    }
+                }
+            }
+            node=node->next;
+        }
+    }
+    else {
+        printf("Nincs eleg ember a bulihoz");
     }
 }
