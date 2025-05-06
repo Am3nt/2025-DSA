@@ -22,7 +22,13 @@ Node *createNewNode(Barat newData) {
 void inorderTraversal(Node *root) {
     if (root == NULL) return;
     inorderTraversal(root->left);
-    printf("%d ", root->info);
+        printf("%s;%d;%d;%d;%c;%d\n",
+    root->info.nev,
+    root->info.szuletesiDatum.ev,
+    root->info.szuletesiDatum.honap,
+    root->info.szuletesiDatum.nap,
+    root->info.nem,
+    root->info.bulizas);
     inorderTraversal(root->right);
 }
 
